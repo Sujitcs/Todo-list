@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+.todo-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-input input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.todo-input button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-input button:hover {
+  background-color: #388e3c;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  flex: 1 1 auto;
+  min-width: 120px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2e3530;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background-color: #078d0e;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li.completed {
+  color: #888888;
+}
+
+li div:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+li.completed div:first-child {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+li.completed div:last-child i {
+  color: #888888;
+}
+
+li i {
+  cursor: pointer;
+  color: #4caf50;
+}
+
+li i:hover {
+  color: #388e3c;
+}
+
+.edit-wrapper {
+  margin-top: 20px;
+}
+
+.edit-wrapper input,
+.edit-wrapper textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.edit-wrapper button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-wrapper button:hover {
+  background-color: #333333;
+}
