@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const showAllButton = document.getElementById("showAll");
   const editWrapper = document.getElementById("editWrapper");
   const editTitle = document.getElementById("editTitle");
-  // const editDescription = document.getElementById("editDescription");
   const updateTaskButton = document.getElementById("updateTask");
 
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         li.innerHTML = `
           <div>
             <strong>${task.title}</strong>
-            <!-- <p>${task.description}</p> -->
           </div>
           <div>
             <i class="fas fa-trash" onclick="deleteTask(${index})" title="Delete"></i>
@@ -62,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentEditIndex = index;
     const task = tasks[index];
     editTitle.value = task.title;
-    // editDescription.value = task.description;
     editWrapper.style.display = "block";
   };
 
@@ -70,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentEditIndex !== null) {
       tasks[currentEditIndex] = {
         title: editTitle.value,
-        // description: editDescription.value,
         completed: tasks[currentEditIndex].completed,
       };
       currentEditIndex = null;
@@ -82,11 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   addTaskButton.addEventListener("click", () => {
     const title = document.getElementById("taskTitle").value;
-    // const description = document.getElementById("taskDescription").value;
-    if (title /* && description */) {
-      tasks.push({ title, /* description, */ completed: false });
+    if (title) {
+      tasks.push({ title, completed: false });
       document.getElementById("taskTitle").value = "";
-      // document.getElementById("taskDescription").value = "";
       saveToLocalStorage();
       updateFilter();
     }
